@@ -170,16 +170,17 @@ body {
     font-size: 50px;
     position: relative;
     right: 25%;
-
+color: transparent;
     background: linear-gradient(60deg, rgba(62, 53, 224, 1) 0%, rgba(43, 199, 216, 1) 22%, rgba(214, 22, 212, 1) 87%, rgba(121, 132, 124, 1) 100%);
     -webkit-background-clip: text;
-    color: transparent;
+    
     font-family: sans-serif;
 }
 .content .animate {
+    color: transparent;
     background: linear-gradient(60deg, rgba(62, 53, 224, 1) 0%, rgba(43, 199, 216, 1) 22%, rgba(214, 22, 212, 1) 87%, rgba(121, 132, 124, 1) 100%);
     -webkit-background-clip: text;
-     color: transparent;
+     
 }
 .content p {
     font-size: 45px;
