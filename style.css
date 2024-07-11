@@ -179,15 +179,15 @@ body {
 .content .animate {
     background: linear-gradient(60deg, rgba(62, 53, 224, 1) 0%, rgba(43, 199, 216, 1) 22%, rgba(214, 22, 212, 1) 87%, rgba(121, 132, 124, 1) 100%);
     -webkit-background-clip: text;
+     color: transparent;
 }
 .content p {
     font-size: 45px;
     position: relative;
     right: 25%;
     font-weight: bold;
-    color:#555659;
-    background: linear-gradient(60deg, rgba(62, 53, 224, 1) 0%, rgba(43, 199, 216, 1) 22%, rgba(214, 22, 212, 1) 87%, rgba(121, 132, 124, 1) 100%);
-    -webkit-background-clip: text;
+    color:rgb(212, 210, 210);
+    
 }
 .about-me{
     position:absolute;
