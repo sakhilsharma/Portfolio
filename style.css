@@ -1,51 +1,43 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 html {
     scroll-behavior: smooth;
-   
-}
-
-:root {
-    --clr: #222327;
 }
 
 body {
-    height: 400vh;
-    width: 99vw;
-    background: var(--clr);
-    
+    height: 420vh;
+    width: 100%;
+    background-color: rgb(0 0 0 / 83%)
 }
 
-#particles-js {
+.content-body {
     height: 100%;
     width: 100%;
-    z-index: -1;
-    display: flex;
+    position: absolute;
 }
 
 .header {
-    width: 400px;
-    height: 70px;
-    position: fixed;
-    left: 37%;
-    top: 5%;
-    z-index: 500;
+    height: 166px;
+    width: 100%;
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .navigation {
     width: 400px;
     height: 70px;
     background-color: #ffffff3b;
-    position: absolute;
+    position: fixed;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 10px;
-
+    z-index: 5000;
 }
 
 .navigation ul {
@@ -87,7 +79,7 @@ body {
 
 .navigation ul li a .text {
     position: absolute;
-    color: #a0a1a6;
+    color: #eaebec;
     font-weight: 400;
     font-size: 1em;
     letter-spacing: 0.05em;
@@ -131,84 +123,82 @@ body {
     transform: translateX(calc(70px * 4));
 }
 
-.discription {
-    height: calc(100vh - 130px);
-    width: 99vw;
-    position: absolute;
-    top: 15%;
+.intro {
+    height: calc(100vh - 166px);
+    width: 100%;
+
 }
 
-.box {
-    height: 66%;
+.description {
+    height: 100%;
     width: 100%;
     display: flex;
-    gap: 29%;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-evenly;
+
+
 }
 
-.discription img {
-    height: 300px;
-    width: 300px;
+.description img {
+    height: 400px;
+    width: 400px;
     border-radius: 50%;
     background-color: #a0a1a6;
     box-sizing: border-box;
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
     border: 2px solid rgba(0, 0, 0, 0.5);
+    position: relative;
+    right: 5%;
+    top: 10%;
 }
 
-.content {
-    width: 438px;
-    height: max-content;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+.description .content {
+    height: 79%;
+    position: relative;
+    top: 10%;
+    right: 70px;
+    line-height: 95px;
 }
 
 .content h2 {
     width: 100%;
     font-size: 50px;
-    position: relative;
-    right: 25%;
-color: transparent;
+    color: transparent;
     background: linear-gradient(60deg, rgba(62, 53, 224, 1) 0%, rgba(43, 199, 216, 1) 22%, rgba(214, 22, 212, 1) 87%, rgba(121, 132, 124, 1) 100%);
     -webkit-background-clip: text;
-    
+
     font-family: sans-serif;
 }
+
 .content .animate {
     color: transparent;
     background: linear-gradient(60deg, rgba(62, 53, 224, 1) 0%, rgba(43, 199, 216, 1) 22%, rgba(214, 22, 212, 1) 87%, rgba(121, 132, 124, 1) 100%);
     -webkit-background-clip: text;
-     
+
 }
+
 .content p {
     font-size: 45px;
-    position: relative;
-    right: 25%;
     font-weight: bold;
-    color:rgb(212, 210, 210);
-    
+    color: rgb(170 211 168 / 28%);
 }
-.about-me{
-    position:absolute;
-    top:89%;
-    height:700px;
-    width:90vw;
+
+.about-me {
+    height: 95vh;
+    width: 100%;
     padding-left: 63px;
     padding-right: 25px;
 }
-.about{
-    height:100%;
-    width:100%;
+
+.about {
+    height: 100%;
+    width: 100%;
     background-color: #000000cc;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+
 }
-.about p{
-    height: 65%;
-    width:90%;
+
+.about p {
+    height: 44%;
+    width: 100%;
     font-size: 29px;
     padding-top: 30px;
     padding-left: 40px;
@@ -217,69 +207,97 @@ color: transparent;
     line-height: 34px;
     letter-spacing: 3px;
 }
-.info{
+
+.info {
     display: flex;
-    gap:50px;
-    
+    gap: 50px;
+    height: 360px;
+    ;
+    width: 400px;
+
 }
 
-.skills{
-    position:absolute;
-    top: 190vh;
-    height:700px;
-    width:90vw;
-    padding-left: 63px;
-    padding-right: 25px;
+.skills {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    top: 10%;
+    padding-left: 73px;
+    padding-right: 63px;
 }
-.skills-me{
-    height:100%;
-    width:100%;
+
+.skills-me {
+    height: 100%;
+    width: 100%;
     background-color: #000000cc;
     display: flex;
     padding-top: 25px;
     align-items: center;
     flex-direction: column;
-    
+
 }
-.skills-me h3{
+
+.skills-me h3 {
     color: transparent;
     background: url('R.gif');
     -webkit-background-clip: text;
-    
+
     background-size: cover;
-     background-repeat: no-repeat;
+    background-repeat: no-repeat;
     font-size: 45px;
     letter-spacing: 3px;
-    
+
 }
-svg ,svg rect{
-    position:absolute;
-   top:0;
-   left:0px;
-   width:90vw;
-   height:725px;
-   fill:transparent;
-   padding-left: 63px;
-    padding-right: 25px;
+
+svg,
+svg rect {
+    position: absolute;
+    width: calc(100% - 70px);
+    height: 100%;
+    fill: transparent;
+
 }
- svg rect{
-    stroke:#1cceb052;
+
+svg rect {
+    stroke: #ffffff;
     stroke-width: 5;
     stroke-dasharray: 384;
-    animation:animate 1s linear infinite;
-    
+    animation: animate 1s linear infinite;
+
 }
+
+.projects {
+    position: relative;
+    top: 20%;
+    height: 100vh;
+    width: 100%;
+    padding-left: 63px;
+    padding-right: 25px;
+}
+
+.my-projects {
+    height: 100%;
+    width: 100%;
+    background-color: #000000cc;
+    display: flex;
+    padding-top: 25px;
+    align-items: center;
+    flex-direction: column;
+}
+
 @keyframes animate {
-    0%{
-        stroke-dashoffset:842; 
+    0% {
+        stroke-dashoffset: 842;
     }
-    100%{
+
+    100% {
         stroke-dashoffset: 0;
     }
 }
-.tags{
+
+.tags {
     height: 70%;
-    width:100%;
+    width: 100%;
     padding-left: 87px;
     padding-top: 60px;
     row-gap: 106px;
@@ -287,90 +305,168 @@ svg ,svg rect{
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(3, 1fr);
 }
-.tags img{
-    height:120px;
-    width:120px;
+
+.tags img {
+    height: 120px;
+    width: 120px;
     background-color: #1e2222;
 }
-.projects{
-    position:absolute;
-    top: 290vh;
-    height:700px;
-    width:90vw;
-    padding-left: 63px;
-    padding-right: 25px;
-}
-.my-projects{
-    height:100%;
-    width:100%;
-    background-color: #000000cc;
-    display: flex;
-    padding-top: 25px;
-    align-items: center;
-    flex-direction: column;
-}
-.circle{
-    height:24px;
-    width:24px;
-    border-radius: 24px;
-    background-color: black;
-    position: absolute;
-    
-}
-.my-projects h3{
+
+.my-projects h3 {
     color: transparent;
     background: url('wave2.webp');
     -webkit-background-clip: text;
-    
+
     background-size: cover;
-     background-repeat: no-repeat;
+    background-repeat: no-repeat;
     font-size: 45px;
     letter-spacing: 3px;
 }
-.prot{
+
+.prot {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
+    gap:10%;
     height: 57%;
-    width:100%;
+    width: 100%;
 }
-#card{
+
+#card {
     height: 93%;
-    width: 220px;
+    width: 230px;
     position: relative;
-    top:70px;
-    border:2px solid rgba(255, 255, 255, 0.6);
+    top: 70px;
+    border: 2px solid rgba(255, 255, 255, 0.6);
     border-radius: 15px;
-    display: flex;
+    display:flex;
     padding: 15px;
 }
-#card h2{
-    height:40px;
-    color:white;
+
+#card h2 {
+    height: 40px;
+    color: white;
     font-size: 20px;
     position: relative;
-    left:20px;
-    top:30px;
+    left: 20px;
+    top: 30px;
 }
 
 
-
-#card p{
-    height:80px;
-    width:100%;
-    color:white;
+#card p {
+    height: 80px;
+    width: 100%;
+    color: white;
     font-size: 17px;
     position: absolute;
-    top:38%;
+    top: 38%;
 
 }
-#card p a{
-    color:white;
-}
-#card img{
-    position: absolute;
-    top:49%;
-    left:20px;
+
+#card p a {
+    color: white;
 }
 
+#card img {
+   position: absolute;
+    top: 49%;
+    left: 20px;
+    
+}
 
+@media (max-width:720px) {
 
+    body{
+        height:372vh;
+    }
+    .description {
+        flex-direction: column;
+        gap: 25px;
+        align-items: center;
+
+    }
+
+    .description img {
+        height: 500px;
+        width: 500px;
+        right: 3%;
+
+    }
+
+    .intro {
+        height: calc(75vh - 166px);
+    }
+
+    .content {
+        left: 0;
+    }
+
+    .content h2 {
+        font-size: 65px;
+    }
+
+    .info {
+        flex-direction: column;
+        width: 90%;
+        position: relative;
+        left: 20px;
+
+    }
+
+    .about-me {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    .about p {
+        height: 48%;
+        font-size: 34px;
+        letter-spacing: 4px;
+    }
+
+    .skills {
+        height: 78vh;
+    }
+
+    .tags {
+        height: 100%;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        padding-left: 5px;
+
+    }
+
+    .tags img {
+        height: 160px;
+        width: 160px;
+    }
+
+    .skills-me h3 {
+        font-size: 70px;
+    }
+    .prot{
+        height:100%;
+        display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    }
+    .my-projects h3{
+        font-size: 70px;
+    }
+    #card{
+        height:87%;
+        width:280px;
+    }
+    #card h2{
+        font-size: 50px;
+    }
+    #card p{
+        height:183px;
+        font-size: 30px;
+    }
+    #card img{
+        top:55%;
+        height: 240px;
+        width: 244px;
+    }
+
+}
